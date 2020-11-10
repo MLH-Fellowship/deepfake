@@ -37,9 +37,9 @@ async def upload(image: UploadFile = File(...), video: UploadFile = File(...)):
 
 @app.get("/get")
 async def get(id: str):
-    return filename
+    
     filename = f'storage/results/{id}.mp4'
-    if path.exists(filename)
+    if path.exists(filename):
         return FileResponse(filename)
-    else 
+    else:
         return {'status': 'not_ready'}
