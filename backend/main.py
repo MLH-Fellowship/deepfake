@@ -30,8 +30,9 @@ async def upload(image: UploadFile = File(...), video: UploadFile = File(...)):
         shutil.copyfileobj(image.file, buffer)
 
     video_filename = f"{video_hash}.{video_ext}"
+    print(video_filename)
     with open(f"storage/uploads/videos/{video_filename}", "wb") as buffer:
-        shutil.copyfileobj(video.file, buffer)
+        pass
 
     return {"status": "processing", "id": image_hash}
 
