@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
 
 /**
@@ -18,6 +19,9 @@ export function FileUpload() {
   function handleUploadVideo(event) {
     setVideo(event.target.files[0])
   }
+  function getRedirectUrl() {
+    return location.protocol + "//" + location.host + "?id="
+  }
 
   return (
     <form
@@ -27,6 +31,7 @@ export function FileUpload() {
       action="http://localhost:8000/upload"
       id="upload-box"
     >
+      <input type="hidden" name="redirect" value={getRedirectUrl()} />
       <div class="image-block">
         <label for="image">Image: </label>
         <input

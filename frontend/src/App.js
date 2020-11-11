@@ -1,11 +1,15 @@
-import './App.css';
-import './FileUpload';
-import { FileUpload } from './FileUpload';
-import putinTrumpGif from './input/putinTrump.gif';
-function App() {
+/* eslint-disable no-restricted-globals */
+import "./App.css"
+import "./FileUpload"
+import { FileUpload } from "./FileUpload"
+import { ResultViewer } from "./ResultViewer"
+import putinTrumpGif from "./input/putinTrump.gif"
+const queryId = new URLSearchParams(location.search).get("id")
 
-  
-  return (
+function App() {
+  return queryId !== null ? (
+    <ResultViewer id={queryId} />
+  ) : (
     <div className="App">
       <header>Deepfake</header>
       <body>
@@ -16,7 +20,7 @@ function App() {
         <FileUpload />
       </body>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

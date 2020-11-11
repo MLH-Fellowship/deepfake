@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #333;
+  background-color: #111;
   color: whitesmoke;
   height: 100vh;
   width: 100vw;
@@ -11,7 +11,7 @@
 }
 
 header {
-  background-color: darkcyan; 
+  background-color: darkcyan;
   font-size: large;
   margin-bottom: 10px;
 }
@@ -21,8 +21,32 @@ header {
   font-size: 20px;
   background: white;
   border: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   padding: 20px 40px;
   border-radius: 10px;
 }
 
+.videoplayer {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.center {
+  display: grid;
+  place-items: center;
+}
+.progress {
+  font-size: 38px;
+  color: white;
+  font-family: monospace;
+}
+.back_btn {
+  background: #aa3911;
+  padding: 15px 25px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
