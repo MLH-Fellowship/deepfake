@@ -37,4 +37,4 @@ We were successfully able to replicate the demos provided in the `first-order-mo
 We learned how to run an ML model on our computers, and that ML models can also run without a GPU, solely relying on CPU.
 
 ## Demo
-You can checkout our demo on [Devpost](https://devpost.com/software/deepfakes-798voc)
+You can check out our demo on [Devpost](https://devpost.com/software/deepfakes-798voc)
